@@ -6,10 +6,6 @@ module.exports = function(grunt) {
 
     grunt.registerTask( 'run', [ 'hapi', 'watch' ]);
 
-    grunt.registerTask('default', 'Testing out Grunt logging and task callbacks', function() {
-        grunt.log.writeln('This is our first Grunt task!');
-    });
-
     grunt.initConfig({
 
         watch: {
@@ -74,17 +70,7 @@ module.exports = function(grunt) {
             }
         },
 
-        clean: ['./dist'],
-
-        web_server: {
-          options: {
-              cors: true,
-              port: 3000,
-              nevercache: true,
-              logRequests: true
-            },
-            foo: 'bar' // For some reason an extra key with a non-object value is necessary
-          }
+        clean: ['./dist']
     });
 
     grunt.loadNpmTasks('grunt-contrib-watch');
