@@ -31,17 +31,25 @@
       currentSong = song;
     };
 
+/**
+* @function playSong
+* @desc Uses the Buzz library to play the sound file and flips the CurrentSong playing flag to true
+* @param {Object} song 
+*/
+    playSong = function () {
+      currentBuzzObject.play();
+      currentSong.playing = true;
+    }
+
     SongPlayer.play = function(song) {
       if ( currentSong !== song) {
         setSong(song);
-        currentBuzzObject.play();
-        song.playing = true;
+        playSong();
 
       } else if (currentSong === song) {
 
           if (currentBuzzObject.isPaused()) {
-            currentBuzzObject.play();
-            song.playing = true;
+            playSong();
           }
       }
     };
