@@ -16,12 +16,14 @@
     * @desc Stops currently playing song and loads new audio file as currentBuzzObject
     * @param {Object} song
     */
-
+    var song = {};
     var setSong = function (song) {
+
       if(currentBuzzObject) {
         currentBuzzObject.stop();
         currentSong.playing = null;
       }
+
 
       currentBuzzObject = new buzz.sound(song.audioUrl, {
         formats: ['mp3'],
