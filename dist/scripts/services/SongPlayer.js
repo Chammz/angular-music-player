@@ -84,15 +84,9 @@
       if (SongPlayer.currentSong !== song) {
         setSong(song);
         playSong();
-<<<<<<< Updated upstream
-
-      } else if (SongPlayer.currentSong === song) {
-
-=======
 
       } else{
 
->>>>>>> Stashed changes
           if (currentBuzzObject.isPaused()) {
             playSong();
           }
@@ -145,10 +139,7 @@
           playSong(song);
         }
     }
-<<<<<<< Updated upstream
-=======
 
->>>>>>> Stashed changes
     return SongPlayer;
   }
 
