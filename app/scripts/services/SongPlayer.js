@@ -58,7 +58,6 @@
     playSong = function () {
       currentBuzzObject.play();
       SongPlayer.currentSong.playing = true;
-
     }
 
     /**
@@ -70,7 +69,6 @@
     stopSong = function() {
       currentBuzzObject.stop();
       SongPlayer.currentSong.playing = null;
-
     }
 
     /**
@@ -86,12 +84,17 @@
         playSong();
 
       } else{
-
           if (currentBuzzObject.isPaused()) {
             playSong();
           }
       }
-    };
+    }
+
+    /**
+    * @function SongPlayer.pause
+    * @desc Pause currently playing song
+    * @param {Object} song
+    */
 
     /**
     * @function SongPlayer.pause
@@ -139,7 +142,6 @@
           playSong(song);
         }
     }
-
     return SongPlayer;
   }
 

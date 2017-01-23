@@ -5,7 +5,6 @@
                  <span class="ion-skip-backward"></span>
              </a>
              <a class="play-pause">
-
                  <span class="ion-play"
                      ng-show="!playerBar.songPlayer.currentSong.playing"
                      ng-click="playerBar.SongPlayer.play()">
@@ -14,7 +13,16 @@
                      ng-show="playerBar.songPlayer.currentSong.playing"
                      ng-click="playerBar.songPlayer.pause()">
                  </span>
-
+                 <span class="ion-play"
+                     ng-show="!song.playing"
+                     ng-show="!playerBar.songPlayer.currentSong.playing"
+                     ng-click="playerBar.SongPlayer.play(song)">
+                 </span>
+                 <span class="ion-pause"
+                     ng-show="song.playing"
+                     ng-show="playerBar.songPlayer.currentSong.playing"
+                     ng-click="playerBar.songPlayer.pause(song)">
+                 </span>
              </a>
              <a class="next" ng-click="playerBar.SongPlayer.next">
                  <span class="ion-skip-forward"></span>
