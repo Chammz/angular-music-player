@@ -61,6 +61,20 @@
     }
 
     /**
+<<<<<<< HEAD
+=======
+    * @function stopSong
+    * @desc Uses the Buzz library to stop the currently playing sound file and flips the SongPlayer.currentSong playing flag to null
+    * @param {Object}
+    */
+
+    stopSong = function() {
+      currentBuzzObject.stop();
+      SongPlayer.currentSong.playing = null;
+    }
+
+    /**
+>>>>>>> assign-8-services3
     * @function SongPlayer.play
     * @desc This will play a song if it is paused, or set a new current song and play the newly created song.
     * @param {Object} song
@@ -71,6 +85,11 @@
       if (SongPlayer.currentSong !== song) {
         setSong(song);
         playSong();
+<<<<<<< HEAD
+=======
+
+      } else if (SongPlayer.currentSong === song) {
+>>>>>>> assign-8-services3
 
       } else{
           if (currentBuzzObject.isPaused()) {
@@ -78,6 +97,12 @@
           }
       }
     }
+
+    /**
+    * @function SongPlayer.pause
+    * @desc Pause currently playing song
+    * @param {Object} song
+    */
 
     /**
     * @function SongPlayer.pause
@@ -111,6 +136,23 @@
           playSong(song);
         }
       }
+<<<<<<< HEAD
+=======
+
+    SongPlayer.next = function() {
+      var currentSongIndex = getsongIndex(SongPlayer.currentSong);
+      currentSongIndex++;
+
+      if(currentSongIndex >= currentAlbum.songs.length) {
+        stopSong();
+
+      } else {
+          var song = currentAlbum.songs[currentSongIndex];
+          setSong(song);
+          playSong(song);
+        }
+    }
+>>>>>>> assign-8-services3
     return SongPlayer;
   }
 
