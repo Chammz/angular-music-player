@@ -58,6 +58,7 @@
     playSong = function () {
       currentBuzzObject.play();
       SongPlayer.currentSong.playing = true;
+
     }
 
     /**
@@ -69,6 +70,7 @@
     stopSong = function() {
       currentBuzzObject.stop();
       SongPlayer.currentSong.playing = null;
+
     }
 
     /**
@@ -82,9 +84,15 @@
       if (SongPlayer.currentSong !== song) {
         setSong(song);
         playSong();
+<<<<<<< Updated upstream
 
       } else if (SongPlayer.currentSong === song) {
 
+=======
+
+      } else{
+
+>>>>>>> Stashed changes
           if (currentBuzzObject.isPaused()) {
             playSong();
           }
@@ -137,6 +145,10 @@
           playSong(song);
         }
     }
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
     return SongPlayer;
   }
 
