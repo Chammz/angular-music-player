@@ -1,7 +1,7 @@
 (function() {
   function SongPlayer(Fixtures) {
     var SongPlayer = {};
-    var currentAlbum = Fixtures.getAlbum();
+    var currentAlbum = Fixtures.getAlbum;
 
     /**
     * @function getSongIndex
@@ -72,13 +72,12 @@
         setSong(song);
         playSong();
 
-      } else if (SongPlayer.currentSong === song) {
-
+      } else{
           if (currentBuzzObject.isPaused()) {
             playSong();
           }
       }
-    };
+    }
 
     /**
     * @function SongPlayer.pause
@@ -112,7 +111,6 @@
           playSong(song);
         }
       }
-    }
     return SongPlayer;
   }
 
