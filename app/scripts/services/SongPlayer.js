@@ -1,7 +1,7 @@
 (function() {
   function SongPlayer(Fixtures) {
     var SongPlayer = {};
-    var currentAlbum = Fixtures.getAlbum;
+    var currentAlbum = Fixtures.getAlbum();
 
     /**
     * @function getSongIndex
@@ -96,14 +96,9 @@
     * @param {Object} song
     */
 
-    /**
-    * @function SongPlayer.pause
-    * @desc Pause currently playing song
-    * @param {Object} song
-    */
-
     SongPlayer.pause = function (song) {
       song = song || SongPlayer.currentSong;
+      //console.log('here');
       currentBuzzObject.pause();
       song.playing = false;
     }
@@ -130,7 +125,7 @@
       }
 
     SongPlayer.next = function() {
-      var currentSongIndex = getsongIndex(SongPlayer.currentSong);
+      var currentSongIndex = getSongIndex(SongPlayer.currentSong);
       currentSongIndex++;
 
       if(currentSongIndex >= currentAlbum.songs.length) {
@@ -147,5 +142,5 @@
 
   angular
     .module('blocJams')
-    .factory('SongPlayer', ['$rootScope', 'Fixtures', SongPlayer]);
+    .factory('SongPlayer', ['Fixtures', SongPlayer]);
 })();

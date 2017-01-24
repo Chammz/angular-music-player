@@ -6,17 +6,15 @@
              </a>
              <a class="play-pause">
                  <span class="ion-play"
-                     ng-show="!song.playing"
                      ng-show="!playerBar.songPlayer.currentSong.playing"
-                     ng-click="playerBar.SongPlayer.play()">
+                     ng-click="playerBar.songPlayer.play()">
                  </span>
                  <span class="ion-pause"
-                     ng-show="song.playing"
                      ng-show="playerBar.songPlayer.currentSong.playing"
                      ng-click="playerBar.songPlayer.pause()">
                  </span>
              </a>
-             <a class="next" ng-click="playerBar.SongPlayer.next">
+             <a class="next" ng-click="playerBar.songPlayer.next()">
                  <span class="ion-skip-forward"></span>
              </a>
          </div>
