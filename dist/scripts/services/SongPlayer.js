@@ -98,7 +98,6 @@
 
     SongPlayer.pause = function (song) {
       song = song || SongPlayer.currentSong;
-      //console.log('here');
       currentBuzzObject.pause();
       song.playing = false;
     }
