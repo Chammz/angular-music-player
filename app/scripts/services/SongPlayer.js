@@ -123,6 +123,12 @@
         }
       }
 
+    /**
+    * @function SongPlayer.next
+    * @desc We user the getSongIndex function to get the index of the currently playing song and then increase that index by one.
+    * @param {Object}
+    */
+    
     SongPlayer.next = function() {
       var currentSongIndex = getSongIndex(SongPlayer.currentSong);
       currentSongIndex++;
