@@ -28,6 +28,14 @@
     SongPlayer.currentTime = null;
 
     /**
+    * @desc cirremt volume 0-100 of currently playing song
+    * @type {Number}
+    */
+
+    SongPlayer.volume = 80;
+    SongPlayer.volumeMax = 100;
+
+    /**
     * @desc Buzz object audio file
     * @type {Object}
     */
@@ -167,6 +175,10 @@
         currentBuzzObject.setTime(time);
       }
     };
+
+    SongPlayer.setVolume = function(volLevel) {
+      currentBuzzObject.setVolume(volLevel);
+    }
 
     return SongPlayer;
   }
